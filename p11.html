@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick me javascript likhi jati hai -->
+     <!-- html elemnt ko javascript ke sath comment karna hai -->
+    <button onclick="hello()">cilck here</button>
+    <button onclick="displayName()">click here to display name</button>
+    <!-- hr= horizontal rural -->
+    <hr>
+
+    <input type="text" id="username" >
+    <button ondblclick="submitName()">submit</button>
+    <script>
+
+        function hello()
+        {
+            document.write("<h1>Hello</h1>");
+        }
+        // hello()
+        // hello()
+        // hello()
+
+        function displayName()
+        {
+            document.write("<h1> sanika</h1>");
+        }
+
+        function submitName()
+        {
+            let username=document.getElementById("username").value;
+            document.write("<h1 style='background-color:plum'>" +username+ "</h1>");
+        }
+
+    </script>
+</body>
+</html>
