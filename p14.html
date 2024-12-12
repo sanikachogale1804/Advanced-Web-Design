@@ -7,8 +7,8 @@
     <style>
         div{
             background-color: aqua;
-            height: 100px;
-            width: 100px;
+            height: 200px;
+            width: 200px;
         }
         div.box{
             background-color: green;
@@ -19,11 +19,17 @@
     
     <div class="container"></div>
     <button onclick="box()" >click here</button>
+    <button onclick="boxcircle()">circle</button>
 
     <script>
         function box()
        {
-        document.write("<h1> sanika</h1>");
+        document.querySelector(".container").innerHTML="</h1>Hello</h1>";
+       }
+
+       function boxcircle()
+       {
+        document.querySelector(".container").style.borderRadius='100%'
        }
     </script>
     
