@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container
+        #container
         {
             border: 2px solid black;
             height: 100px;
@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
     <!-- onclick karna is not correct approch for scalable(bade project) project  -->
     </div>
     <script>
@@ -22,9 +22,9 @@
         //eventlistner is a built in method
         //onclick(onclick karna is not correct approch for scalable(bade project) project) se hora tha vahi yaha pe eventlistener kara hai
        
-        container.addEventListener("click", function (){
+        container.addEventListener("mouseover", function (){
 
-            alert("")
+            alert("hello");
 
         });
 
