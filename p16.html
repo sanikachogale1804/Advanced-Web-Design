@@ -10,9 +10,16 @@
     <input type="text" id="subjects">
     <button onclick="add()">Add</button>
     
-<script>
-    
-</script>
+    <script>
+       function add()
+       {
+           const subject=document.getElementById("subjects").value;
+           const heading=document.createElement("h1");
+           const content=document.createTextNode(subject);
+           heading.appendChild(content);
+           document.body.appendChild(heading);
+       }
+    </script>
 
 </body>
 </html>
