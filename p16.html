@@ -14,7 +14,10 @@
        function add()
        {
            const subject=document.getElementById("subjects").value;
-           const heading=document.createElement("h1");
+           const heading=document.createElement("marquee");
+          //const heading=document.createElement("h1");
+           heading.style.backgroundColor="red";
+           //Text node text banake dega
            const content=document.createTextNode(subject);
            heading.appendChild(content);
            document.body.appendChild(heading);
