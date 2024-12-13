@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="A">
     <!-- onclick karna is not correct approch for scalable(bade project) project  -->
     </div>
     <script>
@@ -27,10 +27,11 @@
         //     container.style.backgroundColor="red"
         // });
 
-        container.addEventListener("click",()=>
-            container.style.backgroundColor="red");
-
-
+//js behind the scene event mai kuch pass karega hume vo dhkhna hai vo console me print karna hai is liye (event likha)
+        container.addEventListener("click",(event)=>{
+            event.target.style.backgroundColor="red";
+            console.log(event.target.className);
+    });
     </script>
 </body>
 </html>
