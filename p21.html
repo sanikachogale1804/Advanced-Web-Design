@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            color: rgb(86, 46, 231);
+        }
+    </style>
 </head>
 <body>
 
@@ -23,8 +28,11 @@
     const listElements=document.getElementById("subjects").children;
     for(let i=0;i<listElements.length;i++)
     {
+        //yaha pe [i] index ka kam kara hai
         // listElements[i].textContent=i;
         listElements[i].style.backgroundColor="plum";
+        listElements[i].style.margin="10px";
+
     }
 
     </script>
