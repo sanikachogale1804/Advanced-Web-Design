@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+
+   
     
+    <script>
+        const colors=["red","green","plum","blue","black"];
+        colors.forEach((color)=>{
+            const div=document.createElement("div");
+            div.style.width="100px";
+            div.style.height="100px";
+            div.style.borderRadius="100%";
+            div.style.backgroundColor=color;
+            document.body.appendChild(div);
+        });
+
+        
+    </script>
+
 </body>
 </html>
