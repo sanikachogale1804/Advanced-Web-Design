@@ -6,9 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-  
+  <div class="container"></div>
+  <button onclick="box()">Click here</button>
+
 <script>
-   
+   function box()
+   {
+       document.querySelector(".container").innerHTML="<h1>Hello</h1>";
+   }
 </script>
 
 </body>
