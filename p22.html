@@ -9,12 +9,20 @@
     <ul id="subjects">
 
     </ul>
-    <button>Add subjects</button>
+    <button onclick="Add()">Add subjects</button>
     <script>
-        const subjects=["HTML","css","Javascript","React"]
-        const list=document.createElement("subjects");
-        const content=document.createTextNode("subjects");
-        list.appendChild(content);
+        const subjects=["HTML","css","Javascript","React","Angular"];
+        function Add()
+        {
+            const ul=document.getElementById("subjects");
+            for(let i=0;i<subjects.length;i++)
+            {
+               const li=document.createElement("li");
+               li.appendChild(document.createTextNode(subjects[i]));
+               ul.appendChild(li);
+            }
+        }
+        
     </script>
     
 </body>
