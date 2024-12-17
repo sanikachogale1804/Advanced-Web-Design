@@ -10,7 +10,11 @@
     <script>
        function sum(...a)
        {
-        return a;
+        total=0;
+        a.forEach((n)=>{
+            total+=n;
+        })
+        return total;
        }
     </script>
 </body>
