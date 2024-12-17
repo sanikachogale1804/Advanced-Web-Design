@@ -31,15 +31,24 @@
             <h1 id="heading">Heading</h1>
         </div>
     </div>
+    <a href="https://www.google.com/" id="link">Google</a>
+    <form action="">
+        <input type="text">
+        <input type="submit" value="submit">
+    </form>
 
     <script>
         document.getElementById("container").addEventListener("click",()=>{
             alert("container");
         });
-        document.getElementById("box").addEventListener("click",()=>{
+        document.getElementById("box").addEventListener("click",(f)=>{
+            f.stopPropagation();
             alert("box");
         })
-        document.getElementById("heading").addEventListener("click",()=>{
+        document.getElementById("heading").addEventListener("click",(e)=>{
+            //(e) is the event object
+            //stop propgation:stop your propagation thing (matlab vo child se parent jara aaise chije vo rok dega)
+            e.stopPropagation();
             alert("heading");
         })
     </script>
