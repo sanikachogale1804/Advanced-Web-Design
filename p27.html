@@ -35,11 +35,13 @@
         alert("container");
       });
 
-      document.getElementById("box").addEventListener("click",()=>{
+      document.getElementById("box").addEventListener("click",(f)=>{
+        f.stopPropagation();
         alert("box");
       })
 
-      document.getElementById("heading").addEventListener("click",()=>{
+      document.getElementById("heading").addEventListener("click",(e)=>{
+        e.stopPropagation();
         alert("heading");
       })
     </script>
