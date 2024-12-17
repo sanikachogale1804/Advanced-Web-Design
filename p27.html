@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container{
-            background-color: plum;
-            height: 400px;
-        }
         
     </style>
 </head>
 <body>
-    <div id="container">
-
-    </div>
     <script>
-        const container=document.getElementById("container");
+        const printname=(name)=>"hello"+name;
+        alert(printname("sanika"));
 
-       container.addEventListener("click",()=>{
-        container.style.borderRadius="50px";
-       })
+        const square=(n)=>n*n;
+        alert(square(7));
 
-        
+        const hello=()=>document.write("hello");
+        hello();
     </script>
 </body>
 </html>
