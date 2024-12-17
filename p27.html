@@ -9,41 +9,13 @@
             background-color: plum;
             height: 400px;
         }
-        #box{
-            background-color: aqua;
-            height: 150px;
-            padding: 20px;
-        }
-        #heading
-        {
-            background-color: blueviolet;
-            border: 2px solid black;
-            padding: 20px;
-            height: 20px;
-        }
+        
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="box">
-            <h1 id="heading"></h1>
-        </div>
+
     </div>
-
-    <script>
-      document.getElementById("container").addEventListener("click",()=>{
-        alert("container");
-      });
-
-      document.getElementById("box").addEventListener("click",(f)=>{
-        f.stopPropagation();
-        alert("box");
-      })
-
-      document.getElementById("heading").addEventListener("click",(e)=>{
-        e.stopPropagation();
-        alert("heading");
-      })
     </script>
 </body>
 </html>
