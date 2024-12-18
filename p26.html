@@ -44,19 +44,21 @@
     <script>
         document.getElementById("container").addEventListener("click",()=>{
             alert("container");
-        });
+        },true);
+        //false matlab they are goin event bubling
+        //true matlab event capturing
         document.getElementById("box").addEventListener("click",(f)=>{
             // f.stopPropagation();
             
             alert("box");
-        })
+        },true)
         document.getElementById("heading").addEventListener("click",(e)=>{
             //(e) is the event object
             //stop propgation:stop your propagation thing (matlab vo child se parent jara aaise chije vo rok dega)
             // e.stopPropagation();
             alert("heading");
             
-        })
+        },true)
         //  jab bhi hum event ko click karte hai to vaha pe sari chije milti hai (event) variable me sab store hota hai
         document.getElementById("link").addEventListener("click",(event)=>{
             event.preventDefault();
