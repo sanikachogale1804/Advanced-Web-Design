@@ -7,7 +7,19 @@
 </head>
 <body>
     <script>
-        
+        //we will create object yaha pe ek student name ka object banaya(id,name is a properties)
+        //nested object : in one object there is another object
+        const student ={
+            "id":101,
+            "name":"sanika",
+            "school":{"schollid":234,"schoolName":"gurukul"}
+        }
+        //[] isme key lhikoge
+        console.log(student["id"])
+        console.log(student["name"])
+        console.log(student["school"])
+        console.log(student["school"]["schollid"])
+        console.log(student["school"]["schoolName"])
     </script>
 </body>
 </html>
