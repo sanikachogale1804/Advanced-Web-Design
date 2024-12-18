@@ -46,14 +46,16 @@
             alert("container");
         });
         document.getElementById("box").addEventListener("click",(f)=>{
-            f.stopPropagation();
+            // f.stopPropagation();
+            
             alert("box");
         })
         document.getElementById("heading").addEventListener("click",(e)=>{
             //(e) is the event object
             //stop propgation:stop your propagation thing (matlab vo child se parent jara aaise chije vo rok dega)
-            e.stopPropagation();
+            // e.stopPropagation();
             alert("heading");
+            
         })
         //  jab bhi hum event ko click karte hai to vaha pe sari chije milti hai (event) variable me sab store hota hai
         document.getElementById("link").addEventListener("click",(event)=>{
