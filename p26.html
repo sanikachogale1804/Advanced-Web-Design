@@ -33,7 +33,7 @@
     </div>
     <a href="https://www.google.com/" id="link">Google</a>
     <!-- onsubmit bhi ek event hai matlab form submit karne pe kya hoga ,form ka submit button pe click kiya to kya hoga-->
-    <form action="" onsubmit="submitHandler()">
+    <form action="" onsubmit="" id="form">
         <input type="text">
         <input type="submit" value="submit">
     </form>
@@ -57,10 +57,9 @@
             event.preventDefault();
         })
 
-        function submitHandler(event)
-        {
-            event.preventDefault();
-        }
+       document.getElementById("form").addEventListener("submit",(event)=>{
+        event.preventDefault();
+       })
 
     </script>
 </body>
