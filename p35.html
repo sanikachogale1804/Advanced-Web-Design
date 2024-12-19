@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //CallBack: function dusre function call kara hai
+        //your giving function to function and function is responsible for calling another function
+        function hello(callback)
+        {
+            document.write("hello");
+            callback(); //hello ko function milega
+        }
+        function bye()
+        {
+            document.write("Bye");
+        }
+        hello(bye)
+        
+    </script>
+</body>
+</html>
