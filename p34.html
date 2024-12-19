@@ -9,16 +9,26 @@
     <script>
         //setTimeout(built in function): delay karega chije ko
         //setTimeOut(function,1000)  matlab function 1 sec ke baad call hoga
-        //asynchronized 
+        //asynchronized : sare function apna apna dekh rahe(another function will not wait for one function)
+        //synchrozied: ek function ka nahi hoga tab tak rukega dusra function(one function will wait until another function will complete work)
         //settimeout function ko function dena rehta hai(internally function hi function ko call kara hai)
+        //js will not wait is is asynchrozied 
         function hello()
         {
            document.write("hello");
+        }
+
+        function bye()
+        {
+            document.write("Bye");
         }
         // setTimeout(hello,5000);
         setTimeout(()=>{
             hello();
         },10000)
+        setTimeout(()=>{
+          bye();
+        },5000)
 
     </script>
 </body>
