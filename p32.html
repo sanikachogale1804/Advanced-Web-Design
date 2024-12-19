@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    //this is used to current object function
+    //js me function ko aaise hi declare nahi karte function and property lihkni padti hai
+    const products=
+    {
+        productId:101,
+        productName:"laptop" ,
+        productPrice:45000,
+        discount:function()
+        {
+            return this.productPrice*0.8;
+        },
+        //details property ke andar pura function store hai
+        details:function()
+        {
+            return this.productId+" "+this.productName;
+        },
+        demo:function(name)
+        {
+             return "my name is:" +name;
+        }
+
+    }
+</script>
+
+</body>
+</html>
