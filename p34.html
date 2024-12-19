@@ -10,10 +10,16 @@
         //setTimeout(built in function): delay karega chije ko
         //setTimeOut(function,1000)  matlab function 1 sec ke baad call hoga
         //asynchronized 
+        //settimeout function ko function dena rehta hai(internally function hi function ko call kara hai)
         function hello()
         {
            document.write("hello");
         }
+        // setTimeout(hello,5000);
+        setTimeout(()=>{
+            hello();
+        },10000)
+
     </script>
 </body>
 </html>
