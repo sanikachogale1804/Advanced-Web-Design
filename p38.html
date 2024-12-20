@@ -13,7 +13,8 @@
         //isme aapko api ka linke dena rehta hai
         //fetch promise ka object return karega
        const promise=fetch("https://catfact.ninja/fact");
-       console.log(promise);
+    //    console.log(promise);
+        promise.then(data=>console.log(data.text()));
     </script>
 </body>
 </html>
