@@ -16,7 +16,7 @@
             const promise=new Promise(function(resolve,reject){
  
             //agar status true rahega to resolve and status false rahega to reject
-            let status=true;
+            let status=false;
             if(status)
                 resolve("success");
             else
@@ -25,9 +25,10 @@
         });
 
         //promise resolve hoga to success aayega and vo then(a)(a me success aya) me pass hoga
-        promise.then((data)=>{alert(data)});
+        // promise.then((data)=>{alert(data)});
+        promise.catch((data)=>{alert(data)});
 
-        
+
     </script>
 </body>
 </html>
