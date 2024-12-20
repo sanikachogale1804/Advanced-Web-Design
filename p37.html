@@ -13,16 +13,19 @@
         //promise is a built in class in js
 
         //in promise() i need to function to them with 2 parameters
-        new Promise(function(resolve,reject){
+            const promise=new Promise(function(resolve,reject){
  
             //agar status true rahega to resolve and status false rahega to reject
             let status=true;
             if(status)
-           {
-                
-           }
-
+                resolve("success");
+            else
+                reject("fail");
+            //agar promise resolve hoga to then call hoga and reject hoga to fail aayega
         });
+
+        //promise resolve hoga to success aayega and vo then(a)(a me success aya) me pass hoga
+        promise.then((data)=>{alert(data)});
 
     </script>
 </body>
