@@ -22,9 +22,16 @@
         {
             document.write(data+"processData function")
         }
-        fetchData(processData)
+        fetchData(processData);
 
-        
+        fetchData ((data)=>{
+            for(let i=1;i<=20;i++)
+        {
+            document.write("<h1>"+data+"</h1>");
+        }
+        });
+        fetchData((n)=>console.log(n));
+
     </script>
 </body>
 </html>
