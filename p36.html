@@ -12,10 +12,10 @@
         //js will not wait for other function as such situation me hume call back ki taraf jana hai
         //jab server se data ara hai and function ko function call kara hai tab call back use hora hai
         //function ko as a argument pass kiya jara hai and function hi funtion ko call kara hai
-        function fetchData(callback)
+        function fetchData(f)   //f is a callback
         {
             data="data from the server";
-            callback(data);
+            f(data);
         }
 
         function processData(data)
