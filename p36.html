@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ek kam ke baad dusra kam ho iske liye call back use hoga
+        //procedata function will be stored in callback
+        //js will not wait for other function as such situation me hume call back ki taraf jana hai
+        //jab server se data ara hai and function ko function call kara hai tab call back use hora hai
+        //function ko as a argument pass kiya jara hai and function hi funtion ko call kara hai
+        function fetchData(callback)
+        {
+            data="data from the server";
+            callback(data);
+        }
+
+        function processData(data)
+        {
+            document.write(data+"processData function")
+        }
+        fetchData(processData)
+
+    </script>
+</body>
+</html>
