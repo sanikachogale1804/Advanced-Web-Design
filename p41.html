@@ -7,7 +7,27 @@
 </head>
 <body>
     <script>
+        function summotation(number)
+        {    
+            hundreds=Math.floor(number/100);
+            tens=Math.floor(hundreds/10)%10;
+            ones=hundreds/10;
+
+            return hundreds+tens+ones;
+        }     
+
+        let number=parseInt(prompt("Enter three digit number"))
         
+        if(number>=100 && number<=999){
+            let sum=summotation(number)
+            document.write(sum)
+        }
+        else{
+
+        }
+       
+
+        summotation();
     </script>
 </body>
 </html>
