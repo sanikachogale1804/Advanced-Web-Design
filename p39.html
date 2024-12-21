@@ -7,16 +7,17 @@
 </head>
 <body>
     <script>
-       function ans(basicSalary,dietAllowance,HouseRentAllowance)
+       function calculateSalary(basicSalary)
        {
-          return basicSalary+dietAllowance+HouseRentAllowance;
-       }
-       let basicSalary=prompt("enter the basic salary:");
-
-       let dietAllowance=0.20*basicSalary;
-       let HouseRentAllowance=0.30*basicSalary;
+          let dietAllowance=0.20*basicSalary;
+          let HouseRentAllowance=0.30*basicSalary;
         
-       let grossSalary=ans(basicSalary+dietAllowance+HouseRentAllowance);
+          let grossSalary=basicSalary+dietAllowance+HouseRentAllowance;
+          return grossSalary;
+       }
+       let basicsalary=prompt("Enter the basic salary:")
+
+       let grossSalary =calculateSalary(basicsalary);
        document.write(grossSalary);
 
     </script>
