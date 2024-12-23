@@ -9,8 +9,9 @@
 
 
     <script>
-        fetch=("https://fakestoreapi.com/products/1")
-        
+        fetch("https://fakestoreapi.com/products/1").
+        then((data)=>data.json()).   //yaha json() promise ka naya object milta hai jiska result object hai
+        then(data=>console.log(data["image"]))
     </script>
 </body>
 </html>
