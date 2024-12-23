@@ -10,7 +10,7 @@
        fetch("https://fakestoreapi.com/carts")
        .then(carts=>carts.json())
        .then(carts=>{
-          console.log(carts[0]["products"])
+          console.log(carts[0]["products"][0]["productId","quantity"])
        })
     </script>
 </body>
