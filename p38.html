@@ -20,7 +20,7 @@
         const promise=fetch("https://catfact.ninja/fact");
         promise.then(data=>data.json()).
         then(data=>{
-           document.getElementById("fact").innerHTML=data["fact"];
+           document.getElementById("fact").innerHTML="<h1>"+data["fact"]+"</h1>";
         });
        })
 
