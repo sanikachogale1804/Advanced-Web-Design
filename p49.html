@@ -10,8 +10,8 @@
         fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
         .then(population=>population.json())
         .then(population=>{
-            console.log(population["data"])
+            console.log(population["data"][0]["ID Year"])
         })
     </script>
 </body>
-</html>
+</html> 
