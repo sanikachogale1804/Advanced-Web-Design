@@ -16,10 +16,12 @@
         //isme aapko api ka linke dena rehta hai
         //fetch promise ka object return karega
 
-       document.getElementById("CatFact").addEventListener(()=>{
+       document.getElementById("CatFact").addEventListener("click",()=>{
         const promise=fetch("https://catfact.ninja/fact");
         promise.then(data=>data.json()).
-        then(data=>document.getElementById("fact").innerHTML=data["fact"]);
+        then(data=>{
+           document.getElementById("fact").innerHTML=data["fact"];
+        });
        })
 
        
