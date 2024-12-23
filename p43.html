@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-
+    <img src="" alt="" id="image" width="50%">
 
     <script>
         fetch("https://fakestoreapi.com/products/1").
         then((data)=>data.json()).   //yaha json() promise ka naya object milta hai jiska result object hai
-        then(data=>console.log(data["image"]))
+        then(data=>{
+        console.log(data["image"]);
+        document.getElementById("image").src=data["image"];
+        document.getElementById("image").className="ABC"
+        });
     </script>
 </body>
 </html>
