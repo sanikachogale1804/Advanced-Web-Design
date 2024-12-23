@@ -10,7 +10,10 @@
         fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
         .then(d=>d.json())
         .then(d=>{
-            console.log(d)
+            console.log(d);
+            d.forEach(p=>{
+                console.log(p)
+            })
         })
     </script>
 </body>
