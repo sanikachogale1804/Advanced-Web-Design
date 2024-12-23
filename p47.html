@@ -7,7 +7,16 @@
 </head>
 <body>
     <script>
+        //products is an array not an object
+        //array me objects mil rahe hai
         fetch("https://fakestoreapi.com/products")
+        .then(products=>products.json())
+        .then(products=>{
+            console.log(products);
+            products.forEach(p=>{
+                console.log(p["title"])
+            })
+        })
     </script>
 </body>
 </html>

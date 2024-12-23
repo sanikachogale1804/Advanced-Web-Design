@@ -10,7 +10,8 @@
 
     <script>
         fetch("https://fakestoreapi.com/products/1").
-        then((data)=>data.json()).   //yaha json() promise ka naya object milta hai jiska result object hai
+        then((data)=>data.json()).   //yaha json() promise ka naya object milta hai 
+        //without json conversion aap aage nahi badhoge
         then(data=>{
         console.log(data["image"]);
         document.getElementById("image").src=data["image"];
