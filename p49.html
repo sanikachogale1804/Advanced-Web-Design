@@ -7,7 +7,9 @@
 </head>
 <body>
     <script>
-        
+        fetch("https://fakestoreapi.com/products/categories")
+        .then(categories=>categories.json())
+        .then(categories)
     </script>
 </body>
 </html> 
