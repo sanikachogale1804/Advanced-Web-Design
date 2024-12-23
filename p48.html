@@ -8,11 +8,14 @@
 <body>
     <button id="Name">click Here</button>
     <script>
-        document.getElementById("Name").addEventListener("click",(event)=>{
+        document.getElementById("Name").addEventListener("click",()=>{
             fetch("https://api.agify.io?name=meelad")
         .then(name=>name.json())
         .then(name=>{
             console.log(name)
+        })
+        document.getElementById("Name").addEventListener("click",()=>{
+            
         })
         })
        
