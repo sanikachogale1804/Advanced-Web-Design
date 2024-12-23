@@ -9,9 +9,15 @@
     <div id="Joke">Joke</div>
     <button id="FetchJokes">Click here</button>
     <script>
-        document.getElementById("Joke").addEventListener("click",()=>{
-            
+        document.getElementById("FetchJokes").addEventListener("click",()=>{
+            fetch("https://api.zippopotam.us/us/33162").
+            then(data=>data.json()).
+            then(data=>{
+                console.log(data["country"])
+            })
         })
+
+        
     </script>
 </body>
 </html>
