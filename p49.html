@@ -10,7 +10,7 @@
         fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
         .then(population=>population.json())
         .then(population=>{
-            
+            console.log(population["data"])
         })
     </script>
 </body>
