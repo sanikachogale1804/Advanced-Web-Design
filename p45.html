@@ -6,9 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="DogApi">Click</button>
-
+    <img src="" alt="" id="dog">
+    <div id="fact">Dog</div>
+    <button id="FetchDogApi">Click</button>
     <script>
+        document.getElementById("FetchDogApi").addEventListener("click",()=>{
+            fetch("https://dog.ceo/api/breeds/image/random").
+            then(data=>data.json()).
+            then(data=>{
+                console.log(data["message"]);
+                document.getElementById("dog").src=data["message"]
+            })
+           
+        })
         
     </script>
 </body>
