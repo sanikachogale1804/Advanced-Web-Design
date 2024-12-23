@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="CatFact">click</button>
+
+    <div>
+        
+    </div>
     <script>
         //fetch is a function
         //springboot se aane vala data yahi function matlab fetch() mujhe dega
@@ -14,7 +19,11 @@
         //fetch promise ka object return karega
        const promise=fetch("https://catfact.ninja/fact");
     //    console.log(promise);
-        promise.then(data=>console.log(data.json()));
+    //data.json promise ka object return kara hai and uske upar vapas then apply hora hai
+    //jab tak promise hai tab tak hum then lhikh sakte hai
+    //apko end me object tak pehchana hai
+        promise.then(data=>data.json()).
+        then(data=>console.log(data["fact"]+data["length"]));
     </script>
 </body>
 </html>
