@@ -1,1 +1,0 @@
-document.write("<h1>External JS</h1>");
