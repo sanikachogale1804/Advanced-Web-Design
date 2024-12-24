@@ -23,15 +23,16 @@
 
     <!-- from currency -->
      <label for="">From</label>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" id="fromCurrency">
         <option selected>Open this select menu</option>
         <option value="USD">USD</option>
         <option value="INR">INR</option>
         <option value="AFN">AFN</option>
       </select>
 
+      <!-- To currency -->
       <label for="">To</label>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" id="toCurrency">
         <option selected>Open this select menu</option>
         <option value="USD">USD</option>
         <option value="INR">INR</option>
@@ -40,9 +41,12 @@
 
       <!-- Amount -->
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Amount</label>
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="exampleFormControlInput1" class="form-label" >Amount</label>
+        <input type="number" class="form-control" id="Amount" placeholder="name@example.com" >
       </div>
+
+      <!-- button -->
+      <button type="button" class="btn btn-danger">Calculate</button>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
