@@ -12,9 +12,8 @@ document.getElementById("calculate").addEventListener("click",()=>{
     .then(data=>data.json())
     .then(data=>{
 
-        const h1=document.createElement("h1")
-        h1.appendChild(document.createTextNode("ans is: "+(data["rates"][toCurrency]*amount)));
-        document.body.appendChild(h1)
+        let answer=data["rates"][toCurrency]*Amount;
+        document.getElementById("answer").textContent=Amount+" "+fromCurrency+"="+answer+" "+toCurrency;
     });
 })
 
