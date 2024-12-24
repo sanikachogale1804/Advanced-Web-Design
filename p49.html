@@ -10,7 +10,7 @@
        fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
        .then(dictionary=>dictionary.json())
        .then(dictionary=>{
-          console.log(dictionary[0]["word"])
+          console.log(dictionary[0]["meanings"])
        })
     </script>
 </body>
