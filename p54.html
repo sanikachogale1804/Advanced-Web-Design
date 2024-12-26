@@ -26,8 +26,8 @@
         async function menuItems()
         {
             const menuItemsData=await fetch("http://localhost:8080/menuItems")
-            menuItemsData.json()
-
+            const jsonData=await menuItemsData.json()
+            console.log(jsonData["_embedded"]["menuItems"][0]["name"]) 
         }
         menuItems()
 
