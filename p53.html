@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function products(){
+        const products=await fetch("http://localhost:8080/product")
+        const jsonData= await products.json();
+        console.log(jsonData["_embedded"]["products"][0])
+        }
+        products()
+    </script>
+</body>
+</html>
