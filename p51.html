@@ -23,7 +23,11 @@
         function job()
         {
             return new Promise(function(resolve,reject){
-
+                let placed=true;
+                if(placed)
+                   resolve({companyName:"XYZ"})
+                else
+                   reject("Not placed")
             })
         }
 
