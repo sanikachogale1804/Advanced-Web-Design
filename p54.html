@@ -19,9 +19,11 @@
         {
            const restaurantData=await fetch("http://localhost:8080/restaurants")
            const data=await restaurantData.json()
-           console.log(data["_embedded"]["restaurants"][0]["name"])
+           console.log(data["_links"]["self"]["href"])
         }
         resturants()
+
+
     </script>
 </body>
 </html>
