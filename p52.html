@@ -11,7 +11,11 @@
         {
             //fetch promise ka object return kara hai is liye iska aage await lagaya
            const data= await fetch("https://api.exchangerate-api.com/v4/latest/USD")
-           console.log(data);
+           //json ka return type promise hai
+        //    console.log(data);
+           //json bhi promise ka object return kara hai is liye await lagaya 
+           const jsonData=await data.json()
+           console.log(jsonData)
         }
         processData()
     </script>
