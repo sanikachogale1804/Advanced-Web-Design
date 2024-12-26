@@ -23,11 +23,13 @@
         }
         //resturants()
 
-        function menuItems()
+        async function menuItems()
         {
-            
-        }
+            const menuItemsData=await fetch("http://localhost:8080/menuItems")
+            menuItemsData.json()
 
+        }
+        menuItems()
 
     </script>
 </body>
