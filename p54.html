@@ -9,10 +9,9 @@
     <script>
         async function users()
         {
-            const users=await fetch("http://localhost:8080/users")
-            console.log(users)
-            const jsonData=await users.json();
-            console.log(jsonData)
+            const data= await fetch("http://localhost:8080/users")
+            console.log(data)
+            data.json()
         }
         users()
     </script>
