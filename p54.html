@@ -11,9 +11,15 @@
         {
             const data= await fetch("http://localhost:8080/users")
             const jsonData=await data.json()
-            console.log(jsonData)
+            console.log(jsonData["_embedded"]["users"][4]["email"])
         }
         users()
+
+        async function resturants()
+        {
+           const rastaurantData=await fetch("http://localhost:8080/restaurants")
+           console.log(resturantData)
+        }
     </script>
 </body>
 </html>
