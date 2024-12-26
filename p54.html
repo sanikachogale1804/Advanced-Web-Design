@@ -18,7 +18,8 @@
         async function resturants()
         {
            const restaurantData=await fetch("http://localhost:8080/restaurants")
-           console.log(restaurantData)
+           const data=await restaurantData.json()
+           console.log(data["_embedded"])
         }
         resturants()
     </script>
