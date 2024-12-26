@@ -8,18 +8,22 @@
 <body>
     <script>
         
-        function stydy()
+        function study()
         {
             //promise ke object me reolve and reject ye 2 parameters dene padte hai whic will be callback
             return new Promise(function(resolve,reject){
-
+                let study=true;
+                if(study)
+                resolve({"id":101,"name":"nisha","studycompleted":"Yes"})
+                else
+                reject({"id":101,"name":"nisha","studycompleted":"NO"})
             })
         }
 
         function job()
         {
             return new Promise(function(resolve,reject){
-                
+
             })
         }
 
