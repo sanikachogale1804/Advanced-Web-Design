@@ -34,10 +34,14 @@
         async function processData()
         {
             //when we aaply await keyword vo apne aap resolve ho jayege par uske liya apka function async hona chahiye
-            await study();
-            await job();
+            //processData apka kam resolve karne ka kam kara hai 
+            const studyData=await study();
+            console.log(studyData)
+            const jobData=await job();
+            console.log(jobData)
         }
 
+        processData()
     </script>
 </body>
 </html>

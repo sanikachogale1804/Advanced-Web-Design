@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function processData()
+        {
+            //fetch promise ka object return kara hai is liye iska aage await lagaya
+           const data= await fetch("https://api.exchangerate-api.com/v4/latest/USD")
+           console.log(data);
+        }
+    </script>
+</body>
+</html>
