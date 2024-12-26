@@ -11,7 +11,8 @@
         {
             const data= await fetch("http://localhost:8080/users")
             console.log(data)
-            data.json()
+            const jsonData=await data.json()
+            console.log(jsonData)
         }
         users()
     </script>
