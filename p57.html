@@ -7,34 +7,36 @@
 </head>
 <body>
      <!-- Productform -->
-     <form class="container mt-3" id="Categoryform">
+     <form id="Categoryform">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Enter category Name</label>
-          <input type="text" name="categoryName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="exampleInputEmail1" class="form-label">Category Name</label>
+          <input type="text" name="categoryName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
+
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Enter Category Discription</label>
-            <input type="text" name="CategoryDiscription"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-       
+            <label for="exampleInputEmail1" class="form-label">Category Discription</label>
+            <input type="text" name="categoryDiscription" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+      <script>
+        document.getElementById("Categoryform").addEventListener("submit",(event)=>{
+            fetch("http://localhost:8080/category",{
+                method:"POST",
+                headers:{
+                        "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    categoryName:event.target.categoryName.value,
+                    categoryDiscription:event.target.categoryDiscription.value
+                })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
+        })
+    </script>
+    
 
-<script>
-    document.getElementById("Categoryform").addEventListener("submit",(event)=>{
-        fetch("http://localhost:8080/category",{
-            method:"POST",
-            headers:{
-                    "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                categoryName:event.target.categoryName.value,
-                categoryDiscription:event.target.categoryDiscription.value
-            })
-        }).then(data=>data.json())
-        .then(data=>console.log(data))
-    })
-</script>
       <!--end form  -->
 </body>
 </html>
