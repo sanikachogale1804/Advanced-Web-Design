@@ -14,9 +14,19 @@
 //{} yaha pe request ke bare me info dete hai
 //post karne ke liye object ki jarurat padti hai
 //pehli chija batani hai vo hai method
+//headers itself is  a object
+//yaha pe json ke methods use karne padte hai
+//strinify apke pura object ko string me convert karega and then vo object add hoga
             fetch("http://localhost:8080/product",{
                 method:"POST",
-                
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    productName:"dummy Product",
+                    productDescription:"dummy description",
+                    prductPrice:5000
+                })
             })
 
         })
