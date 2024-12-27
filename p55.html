@@ -9,8 +9,16 @@
 
     <button id="addProduct">Add product</button>
     <script>
-        document.getElementById("addProduct").addEventListener("click",(){
-            
+        document.getElementById("addProduct").addEventListener("click",()=>{
+//fetch ke through product add karna hai
+//{} yaha pe request ke bare me info dete hai
+//post karne ke liye object ki jarurat padti hai
+//pehli chija batani hai vo hai method
+            fetch("http://localhost:8080/product",{
+                method:"POST",
+                
+            })
+
         })
     </script>
 </body>
