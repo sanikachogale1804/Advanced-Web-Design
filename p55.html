@@ -27,7 +27,8 @@
                     productDescription:"dummy description",
                     prductPrice:5000
                 })
-            })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
 
         })
     </script>
