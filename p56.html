@@ -12,8 +12,7 @@
   </head>
   <body>
     <!-- Productform -->
-    <form>
-
+    <form class="container mt-3" id="Productform">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Enter Product Id</label>
           <input type="number" name="productId"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -33,6 +32,26 @@
        
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+<script>
+        document.getElementById("addProduct").addEventListener("click",()=>{
+            fetch("http://localhost:8080/product",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    productId:107,
+                    productName:"dummy Product",
+                    productDescription:"dummy description",
+                    prductPrice:5000
+                })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
+
+        })
+    </script>
+</script>
 
     <!-- end Productform -->
 
