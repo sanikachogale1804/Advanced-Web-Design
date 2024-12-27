@@ -8,6 +8,8 @@
 <body>
 
     <button id="addProduct">Add product</button>
+    
+
     <script>
         document.getElementById("addProduct").addEventListener("click",()=>{
 //fetch ke through product add karna hai
@@ -17,12 +19,14 @@
 //headers itself is  a object
 //yaha pe json ke methods use karne padte hai
 //strinify apke pura object ko string me convert karega and then vo object add hoga
+//fetch ne tomcat server(jo springboot ke through jara hai) se deal kiya and us server ne is object ko mysql server me add kiya
             fetch("http://localhost:8080/product",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
                 },
                 body:JSON.stringify({
+                    productId:107,
                     productName:"dummy Product",
                     productDescription:"dummy description",
                     prductPrice:5000
