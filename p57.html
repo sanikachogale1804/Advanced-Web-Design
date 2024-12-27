@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Productform -->
+     <form class="container mt-3" id="Categoryform">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Enter category Name</label>
+          <input type="number" name="categoryName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Category Discription</label>
+            <input type="text" name="CategoryDiscription"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+<script>
+    document.getElementById("Categoryform").addEventListener("submit",()=>{
+        fetch("http://localhost:8080/category",{
+            
+        })
+    })
+</script>
+      <!--end form  -->
+</body>
+</html>

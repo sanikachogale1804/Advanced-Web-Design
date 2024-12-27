@@ -34,17 +34,18 @@
       </form>
 
 <script>
-        document.getElementById("Productform").addEventListener("submit",()=>{
+        document.getElementById("Productform").addEventListener("submit",(event)=>{
+            event.preventDefault();
             fetch("http://localhost:8080/product",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
                 },
                 body:JSON.stringify({
-                    productId:107,
-                    productName:"dummy Product",
-                    productDescription:"dummy description",
-                    prductPrice:5000
+                    productId:event.target.productId.value,
+                    productName:event.target.productName.value,
+                    productDescription:event.target.productDescription.value,
+                    prductPrice:event.target.productPrice.value
                 })
             }).then(data=>data.json())
             .then(data=>console.log(data))
