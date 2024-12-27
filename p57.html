@@ -10,7 +10,7 @@
      <form class="container mt-3" id="Categoryform">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Enter category Name</label>
-          <input type="number" name="categoryName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="text" name="categoryName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Category Discription</label>
@@ -21,10 +21,18 @@
       </form>
 
 <script>
-    document.getElementById("Categoryform").addEventListener("submit",()=>{
+    document.getElementById("Categoryform").addEventListener("submit",(event)=>{
         fetch("http://localhost:8080/category",{
-            
-        })
+            method:"POST",
+            headers:{
+                    "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                categoryName:event.target.categoryName.value,
+                categoryDiscription:event.target.categoryDiscription.value
+            })
+        }).then(data=>data.json())
+        .then(data=>console.log(data))
     })
 </script>
       <!--end form  -->
