@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container{
+            border: 2px solid black;
+            height: 200px;
+            width: 100px;
+        }
+        #container2{
+            border: 2px solid black;
+            height: 200px;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <div id="container"></div>
-    
+    <div id="container2"></div>
     <script>
         const container=document.getElementById("container");
-        container.addEventListener("dblclick",)
+        container.addEventListener("click",function(){
+            container.style.backgroundColor="red";
+        })
     </script>
 </body>
 </html>
