@@ -5,32 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container{
-            border: 2px solid black;
-            height: 200px;
-            width: 100px;
-        }
-        #container2{
-            border: 2px solid black;
-            height: 200px;
-            width: 100px;
-        }
+    
     </style>
 </head>
 <body>
-    <div id="container"></div>
-    <div id="container2"></div>
+   
+    <ul id="subjects">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>BOOTSTRAP</li>
+        <li>Java</li>
+    </ul>
     <script>
-        const container=document.getElementById("container");
-        // container.addEventListener("click",function(){
-        //     container.style.backgroundColor="red";
-        // })
-        const container2=document.getElementById("container2");
-        container2.addEventListener("click",()=>{
-            container2.style.borderRadius="100%";
-        })
-        
-
+       const listElements=document.getElementById("subjects");
+      
     </script>
 </body>
 </html>
