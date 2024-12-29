@@ -12,15 +12,15 @@
 
 
    <script>
-      const colors=["red","blue","green","black"];
-      colors.forEach((color)=>{
-        const div=document.createElement("div");
-        div.style.width="100%";
-        div.style.height="200%";
-        div.style.borderRadius="100%";
-        div.style.backgroundColor=color;
-        
-      })
+      function sum(...a)
+      {
+          let count=0;
+          a.forEach((a)=>{
+              count*=a;
+          })
+          return count;
+      }
+      sum()
    </script>
 </body>
 </html>
