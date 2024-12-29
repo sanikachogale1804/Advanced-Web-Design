@@ -12,15 +12,12 @@
 
 
    <script>
-      function sum(...a)
-      {
-          total=1;
-          a.forEach((n)=>{
-              total*=n;
-          })
-          return total;
-      }
-      sum()
+       async function dictionary()
+       {
+          const data=await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello");
+         const datajson=await data.json();
+       }
+       dictionary()
    </script>
 </body>
 </html>
