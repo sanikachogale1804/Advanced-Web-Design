@@ -1,5 +1,9 @@
 fetch("http://localhost:8080/product")
 .then(data=>data.json())
 .then(data=>{
-    console.log(data["_embedded"]["products"][1]["productName"])
+    console.log(data)
+    data["_embedded"]["products"].forEach((product)=>{
+        console.log(product)
+
+    }) 
 })
