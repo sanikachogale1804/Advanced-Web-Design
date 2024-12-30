@@ -16,6 +16,7 @@
        {
           const data=await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello");
          const datajson=await data.json();
+         console.log(datajson[0]["meanings"][0]["synonyms"]["length"])
        }
        dictionary()
    </script>
