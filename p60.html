@@ -13,10 +13,11 @@
         <input type="submit" name="submit" id="">
     </form>
     <script>
-        document.getElementById("productForm").addEventListener("click",(event)=>{
+        document.getElementById("productForm").addEventListener("submit",(event)=>{
 
             event.preventDefault();
-            
+            console.log(event.target.productName.value);
+            console.log(event.target.productPrice.value);
         })
     </script>
 </body>
