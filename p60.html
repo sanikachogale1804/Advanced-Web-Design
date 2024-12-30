@@ -10,9 +10,19 @@
        let object1={
           productId:101,
           productName:"Laptop",
-          productPrice:50000
+          productPrice:50000,
+          details:function()
+          {
+              return this.productId+" "+this.productName+" "+this.productPrice;
+          },
+          discount:function()
+          {
+            return this.productPrice*0.8;
+          }
        }
-       console.log([object1["productId"]])
+       //console.log([object1["productId"]])
+      console.log(object1)
+
    </script>
 </body>
 </html>
