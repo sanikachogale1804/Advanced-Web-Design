@@ -5,8 +5,7 @@ fetch("http://localhost:8080/product")
     data["_embedded"]["products"].forEach((product)=>{
         console.log(product);
         const a=document.createElement("a");
-        a.textContent=product("prodcutName");
+        a.textContent=product["productName"];
         document.body.appendChild(a);
-
     }) 
 })
