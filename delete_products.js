@@ -9,7 +9,16 @@ fetch("http://localhost:8080/product")
         document.body.appendChild(a);
         //setAttribute is js method which will help you
         console.log(product["_links"]["self"]["href"]);
+        //setAttribute is a method usko attribute ka name dena hai
         a.setAttribute("href",product["_links"]["self"]["href"]);
+
+        a.addEventListener("click",(event)=>{
+
+            event.preventDefault();
+            fetch(product["_links"]["self"]["href"],{method:"DELETE"})
+            .then(data=>data.json())
+            .then(data=>console.log("deleted successfully"+data));
+        })
 
     }) 
 })
