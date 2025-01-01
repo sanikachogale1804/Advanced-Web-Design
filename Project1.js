@@ -8,5 +8,6 @@ const quotes=[
 
 ]
 
-const quoteText=document.getElementById("quoteText")
-console.log(quoteText);
+const quoteText=document.getElementById("quoteText");
+const quoteAuthor=document.getElementById("quoteAuthor");
+const newQuoteButton=document.getElementById("newQuoteButton");
