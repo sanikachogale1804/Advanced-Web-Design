@@ -12,3 +12,8 @@ body{
     align-items: center;
     height: 100vh;
 }
+
+.container
+{
+    background-color: #fff;
+}
