@@ -32,3 +32,17 @@ h1{
 {
     margin-bottom: 20px;
 }
+
+#quoteText
+{
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#quoteAuthor
+{
+    font-size: 18px;
+    color: #888;
+    font-style: italic;
+}
