@@ -16,7 +16,9 @@
        {
         const users=await fetch("http://localhost:8080/users")
        const jsonData=await users.json();
+       console.log(jsonData["_embedded"]["users"][6])
        }
+       users()
     </script>
 </body>
 </html>
