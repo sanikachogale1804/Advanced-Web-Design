@@ -6,6 +6,34 @@
     <title>Document</title>
 </head>
 <body>
+    <form id="userForm">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter User Id</label>
+            <input type="number" name="productId"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Enter User Name</label>
+              <input type="text" name="productName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Enter User email</label>
+              <input type="text" name="productDescription"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Enter User password</label>
+              <input type="password" name="productPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter User role</label>
+                <input type="text" name="productPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter User phoneNumber</label>
+                <input type="number" name="productPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+         
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <script>
         async function products(){
         const products=await fetch("http://localhost:8080/product")
