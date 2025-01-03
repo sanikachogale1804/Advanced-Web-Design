@@ -13,6 +13,7 @@ fetch("http://localhost:8080/restaurants")
 
        a.addEventListener("click",(event)=>{
             event.preventDefault();
+            fetch(users["_links"]["self"]["href"],{})
        })
 
 
