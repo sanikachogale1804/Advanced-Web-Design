@@ -4,6 +4,7 @@ fetch("http://localhost:8080/menuItems")
     console.log(data["_embedded"]["menuItems"]);
     data["_embedded"]["menuItems"].forEach((menuItems)=>{
         //console.log(menuItems)
+        const a=document.createElement("a")
         
     })
 })
