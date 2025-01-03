@@ -13,7 +13,9 @@ fetch("http://localhost:8080/restaurants")
 
        a.addEventListener("click",(event)=>{
             event.preventDefault();
-            fetch(users["_links"]["self"]["href"],{})
+            fetch(users["_links"]["self"]["href"],{method:"DELETE"})
+            .then(data=>data.json())
+            .then(data=>console.log("deleted successfullt"+data))
        })
 
 
