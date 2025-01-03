@@ -11,6 +11,11 @@ fetch("http://localhost:8080/restaurants")
        console.log(users["_links"]["self"]["href"])
        a.setAttribute("href",users["_links"]["self"]["href"])
 
+       a.addEventListener("click",(event)=>{
+            event.preventDefault();
+       })
+
+
     })
   
 })
