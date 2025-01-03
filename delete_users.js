@@ -1,9 +1,9 @@
-fetch("http://localhost:8080/users")
+fetch("http://localhost:8080/restaurants")
 .then(data=>data.json())
 .then(data=>{
-console.log(data);
-data["_embedded:"]
-
-}
-
-)
+    console.log(data["_embedded"]["restaurants"]);
+    data["_embedded"]["restaurants"].forEach(()=>{
+        
+    })
+  
+})
