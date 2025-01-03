@@ -12,7 +12,7 @@ fetch("http://localhost:8080/menuItems")
         a.setAttribute("href",menuItems["_links"]["self"]["href"])
 
         a.addEventListener("click",(event)=>{
-
+            event.preventDefault();
         })
 
     })
