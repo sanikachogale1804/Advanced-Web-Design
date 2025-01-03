@@ -9,5 +9,11 @@ fetch("http://localhost:8080/menuItems")
         document.body.appendChild(a);
 
         console.log(menuItems["_links"]["self"]["href"])
+        a.setAttribute("href",menuItems["_links"]["self"]["href"])
+
+        a.addEventListener("click",(event)=>{
+
+        })
+
     })
 })
