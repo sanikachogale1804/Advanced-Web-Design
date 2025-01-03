@@ -26,7 +26,19 @@
   <script>
       document.getElementById("restaurantForm").addEventListener("submit",(event)=>[
          event.preventDefault();
-         
+         fetch("http://localhost:8080/restaurants",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify({
+                name:event.target.name.value,
+                address:event.target.address.value,
+                phoneNumber:event.target.phoneNumber.value
+            })
+         })
+         .then(data=>data.json())
+         .
       ])
 
   </script>
