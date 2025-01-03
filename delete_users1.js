@@ -15,6 +15,7 @@ fetch("http://localhost:8080/menuItems")
             event.preventDefault();
             fetch(menuItems["_links"]["self"]["href"],{method:"DELETE"})
             .then(data=>data.json())
+            .then(data=>console.log("deleted succefully"+data));
 
         })
 
