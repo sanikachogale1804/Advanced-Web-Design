@@ -3,6 +3,7 @@ fetch("http://localhost:8080/menuItems")
 .then(data=>{
     console.log(data["_embedded"]["menuItems"]);
     data["_embedded"]["menuItems"].forEach((menuItems)=>{
-        console.log(menuItems)
+        //console.log(menuItems)
+        
     })
 })
