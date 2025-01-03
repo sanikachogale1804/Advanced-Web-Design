@@ -14,6 +14,7 @@ fetch("http://localhost:8080/menuItems")
         a.addEventListener("click",(event)=>{
             event.preventDefault();
             fetch(menuItems["_links"]["self"]["href"],{method:"DELETE"})
+            .then(data=>data.json())
 
         })
 
