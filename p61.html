@@ -36,7 +36,7 @@
     </form>
     <script>
          document.getElementById("userForm").addEventListener("submit",(event)=>{
-            event.preventDefault();
+            event.preventDefault(),
             fetch("http://localhost:8080/users",{
                 method:"POST",
                 headers:{

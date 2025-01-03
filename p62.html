@@ -25,7 +25,7 @@
 
   <script>
       document.getElementById("restaurantForm").addEventListener("submit",(event)=>[
-         event.preventDefault();
+         event.preventDefault(),
          fetch("http://localhost:8080/restaurants",{
             method:"POST",
             headers:{
@@ -38,7 +38,7 @@
             })
          })
          .then(data=>data.json())
-         .
+         .then(data=>console.log(data))
       ])
 
   </script>
