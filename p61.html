@@ -10,29 +10,26 @@
 </head>
 <body>
     <form class="container mt-3" id="userForm">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Enter User Id</label>
-            <input type="number" name="UserId"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
+        
           <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Enter User Name</label>
-              <input type="text" name="UserName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" name="name"  class="form-control"  aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Enter User email</label>
-              <input type="text" name="UserDescription"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" name="email"  class="form-control"  aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Enter User password</label>
-              <input type="password" name="UserPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="password" name="password"  class="form-control"  aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter User role</label>
-                <input type="text" name="UserPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" name="role"  class="form-control" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter User phoneNumber</label>
-                <input type="number" name="UserPrice"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="number" name="phoneNumber"  class="form-control"  aria-describedby="emailHelp">
             </div>
          
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -46,12 +43,14 @@
                     "Content-Type":"application/json"
                 },
                 body:JSON.stringify({
-                    userId:event.target.userId.value,
-                    userName:event.target.userName.value,
-                    user
+                    name:event.target.name.value,
+                    email:event.target.email.value,
+                    password:event.target.password.value,
+                    role:event.target.role.value,
+                    phoneNumber:event.target.phoneNumber.value
                 })
-
-            })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
          })
     </script>
 </body>
