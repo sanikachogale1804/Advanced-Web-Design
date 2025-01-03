@@ -20,8 +20,15 @@
               <label for="exampleInputEmail1" class="form-label">Enter Restaurant phoneNumber</label>
               <input type="number" name="phoneNumber"  class="form-control"  aria-describedby="emailHelp">
           </div>
-       
         <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+  <script>
+      document.getElementById("restaurantForm").addEventListener("submit",(event)=>[
+         event.preventDefault();
+         
+      ])
+
+  </script>
 </body>
 </html>
