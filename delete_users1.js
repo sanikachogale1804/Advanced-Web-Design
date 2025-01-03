@@ -5,6 +5,9 @@ fetch("http://localhost:8080/menuItems")
     data["_embedded"]["menuItems"].forEach((menuItems)=>{
         //console.log(menuItems)
         const a=document.createElement("a")
-        
+        a.textContent=menuItems["name"];
+        document.body.appendChild(a);
+
+        console.log(menuItems["_links"]["self"]["href"])
     })
 })
