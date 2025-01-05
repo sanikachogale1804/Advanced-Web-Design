@@ -12,7 +12,14 @@
     <script>
         function add()
         {
-            
+            const subject=document.getElementById("subjects").value
+            //console.log(subject)
+            const heading= document.createElement("h1")
+            document.write(heading)
+            const content=document.createTextNode(subject)
+            heading.appendChild(content)
+            document.body.appendChild(heading)
+            console.log(heading)
         }
     </script>
 </body>
