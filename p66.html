@@ -10,8 +10,9 @@
    <button id="jokes">click here</button>
    <script>
        document.getElementById("jokes").addEventListener("click",()=>{
-          const promise=fetch("https://official-joke-api.appspot.com/random_joke");
-          
+          const promise=fetch("https://official-joke-api.appspot.com/random_joke")
+          .then((data)=>data.json());
+          console.log(data);
        })
    </script>
 </body>
