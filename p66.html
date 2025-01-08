@@ -14,6 +14,10 @@
           .then(name=>name.json())
           .then(name=>console.log(name))
        })
+       document.getElementById("Name").addEventListener("click",()=>{
+         Name.style.backgroundColor="red";
+         Name.style.borderRadius="100%";
+       })
    </script>
 </body>
 </html>
