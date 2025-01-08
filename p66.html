@@ -12,13 +12,16 @@
      {
        document.write("hello")
      }
-     setTimeout(hello,5000);
+     setTimeout(()=>{
+       hello();
+     },10000)
     
      function bye()
      {
       document.write("bye")
      }
-     setTimeout(bye,5000)
+     
+    
    </script>
 </body>
 </html>
