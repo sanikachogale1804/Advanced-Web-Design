@@ -8,14 +8,7 @@
 </head>
 <body>
    <script>
-     const promise=new Promise(function(rsolve,reject){
-         let status=true;
-         if(status)
-            rsolve("succes")
-         else
-            reject("fail")
-     });
-    promise.then((data)=>alert(data))
+    const promise=fetch("https://official-joke-api.appspot.com/random_joke")
    </script>
 </body>
 </html>
