@@ -9,13 +9,13 @@
 <body>
    <script>
      const promise=new Promise(function(rsolve,reject){
-         let status=false;
+         let status=true;
          if(status)
             rsolve("succes")
          else
             reject("fail")
      });
-    
+    promise.then((data)=>alert(data))
    </script>
 </body>
 </html>
