@@ -10,7 +10,10 @@
    <script>
      const promise=new Promise(function(rsolve,reject){
          let status=false;
-         
+         if(status)
+            rsolve("succes")
+         else
+            reject("fail")
      });
     
    </script>
