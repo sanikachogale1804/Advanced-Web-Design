@@ -9,17 +9,18 @@
 <body>
    
    <script>
-      function greet(name )
+      function greet(name,callBack )
       {
         document.write("Hello "+name);
+        callBack();
       }
-      greet("sanika")
+     // greet("sanika")
 
       function sayGoodbye()
       {
          document.write("Goodbye")
       }
-      
+      greet("sanika",sayGoodbye)
    </script>
 </body>
 </html>
