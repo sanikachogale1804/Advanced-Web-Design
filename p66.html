@@ -9,18 +9,11 @@
 <body>
    
    <script>
-       function fetchData(f)
-       {
-          data="Data fetch from the server"
-          f(data)
-       }
-
-       function processData(data)
-       {
-        document.write("ProcessData function")
-       }
-
-       fetchData(processData)
+      function greet(name )
+      {
+        document.write("Hello"+name);
+      }
+      greet("sanika")
    </script>
 </body>
 </html>
