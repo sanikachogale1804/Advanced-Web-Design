@@ -7,18 +7,20 @@
     
 </head>
 <body>
-   <button id="Name">Click here</button>
+   
    <script>
-       function fetchData()
+       function fetchData(f)
        {
           data="Data fetch from the server"
+          f(data)
        }
 
-       function processData()
+       function processData(data)
        {
         document.write("ProcessData function")
        }
 
+       fetchData(processData)
    </script>
 </body>
 </html>
